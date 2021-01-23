@@ -1,0 +1,70 @@
+﻿@model ETicaret.Core.Model.Entity.Product
+
+@{
+    ViewBag.Title = "Detail";
+    var isLogin = (bool)ViewBag.IsLogin;
+}
+
+<h2>Ürün Detayı</h2>
+<div>
+    <div class="col-lg-6" style="border:2px solid #808080">
+        
+        <img src="@Model.ImageUrl" />
+    </div>
+    <div class="col-lg-6">
+        <h3><b>@Model.Name </b></h3>
+        <p>
+            <b>Renk :</b> @Model.Renk
+        </p>
+        <p>
+            <b>Fiyatı :</b> @Model.Price.ToString("##,## TL")
+        </p>
+        <p>
+            <b>Açıklama :</b> @Model.Description
+        </p>
+        <p>
+            <b>Stok :</b> @Model.Stock
+        </p>
+        @{
+            if (isLogin == true)
+            {
+                <a href="#" data-pID="@Model.ID" class="btn btn-default addCart"><i class="fas fa-shopping-basket"></i>Sepete Ekle</a>
+            }
+        }
+    </div>
+    
+</div>
+
+<div id="ETicModal" title="Sepetim">
+    Ürün Sepete Eklenmiştir.
+    <a href="/Sepetim" class="btn btn-success">Sepete Git</a>
+</div>
+
+
+@section script{
+    <script type="text/javascript">
+        $(function () {
+            $("#ETicModal").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "explode",
+                    duration: 1000
+                }
+            });
+
+            $(".addCart").on("click", function () {
+                var pid = $(this).attr("data-pID");
+                $.post("/Cart/AddProduct?productID=" + pid + "&quantity=1", function (data) {
+                    $("#ETicModal").dialog("open");
+                })
+
+                return false;
+            });
+        });
+    </script>
+
+}

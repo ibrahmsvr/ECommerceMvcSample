@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaret.UI.Web", "ETicaret.UI.Web\ETicaret.UI.Web.csproj", "{158F22EA-FEA4-4761-8DEE-812C8A6AD0E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicaret.Core.Model", "ETicaret.Core.Model\ETicaret.Core.Model.csproj", "{8EAB6B3E-1426-48F7-9DF8-4BEC0B6322E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{158F22EA-FEA4-4761-8DEE-812C8A6AD0E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158F22EA-FEA4-4761-8DEE-812C8A6AD0E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158F22EA-FEA4-4761-8DEE-812C8A6AD0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158F22EA-FEA4-4761-8DEE-812C8A6AD0E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EAB6B3E-1426-48F7-9DF8-4BEC0B6322E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EAB6B3E-1426-48F7-9DF8-4BEC0B6322E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EAB6B3E-1426-48F7-9DF8-4BEC0B6322E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EAB6B3E-1426-48F7-9DF8-4BEC0B6322E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A908C8A4-7ED2-404E-8010-27E2C8D3E0F3}
+	EndGlobalSection
+EndGlobal
